@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <h1>ログイン</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="emplid">Employee ID:</label>
+        <input type="text" id="emplid" name="emplid" required>
+        <button type="submit">ログイン</button>
+    </form>
+</body>
+</html>
